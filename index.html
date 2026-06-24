@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SECIN S.A. - Dashboard Operativo</title>
+<strong>Indicadores Operativos - Abril y Mayo 2026</strong>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -144,58 +144,90 @@ body{
 
 <div class="container">
 
-    <div class="kpis">
+<div class="kpis">
 
-        <div class="card">
-            <h3>Disponibilidad Operativa</h3>
-            <div class="value">94%</div>
-            <div class="detail">Abril: 88,3% | Mayo: 94,0%</div>
+    <div class="card">
+        <h3>Dotación</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 94<br>
+            <strong>Mayo:</strong> 94
         </div>
-
-        <div class="card">
-            <h3>Personal Operativo</h3>
-            <div class="value">88</div>
-            <div class="detail">+5 personas respecto a abril</div>
-        </div>
-
-        <div class="card">
-            <h3>Personal No Operativo</h3>
-            <div class="value">6</div>
-            <div class="detail">-49% respecto a abril</div>
-        </div>
-
-        <div class="card">
-            <h3>Trabajo Extraordinario</h3>
-            <div class="value">132</div>
-            <div class="detail">+12% respecto a abril</div>
-        </div>
-
-        <div class="card">
-            <h3>Cobertura de Dotación</h3>
-            <div class="value">94%</div>
-            <div class="detail">88,3% → 94,0%</div>
-        </div>
-
-        <div class="card">
-            <h3>Intensidad Operativa</h3>
-            <div class="value">1,49</div>
-            <div class="detail">Recursos extra por operario</div>
-        </div>
-
     </div>
+
+    <div class="card">
+        <h3>Operarios Presentes</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 82,99<br>
+            <strong>Mayo:</strong> 88,38
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Cobertura de Dotación</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 88,3%<br>
+            <strong>Mayo:</strong> 94,0%
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Ausentismo</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 11,7%<br>
+            <strong>Mayo:</strong> 6,0%
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Operarios con Horas Extra (Lun-Vie)</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 45,1%<br>
+            <strong>Mayo:</strong> 49,0%
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Operarios que trabajaron Sábado</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 53,7%<br>
+            <strong>Mayo:</strong> 55,9%
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Operarios que trabajaron Fin de Semana</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 27,1%<br>
+            <strong>Mayo:</strong> 35,2%
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Turno Noche</h3>
+        <div class="detail">
+            <strong>Abril:</strong> 11,73<br>
+            <strong>Mayo:</strong> 10,24
+        </div>
+    </div>
+
+</div>
 
     <div class="chart-box">
         <h2>Utilización de Dotación</h2>
         <canvas id="dotacionChart"></canvas>
+        
+        <p style="margin-top:15px;color:#666;">
+La dotación total del taller es de 94 personas.
+</p>
     </div>
 
     <div class="chart-box">
-        <h2>Recursos Extraordinarios</h2>
+        <h2>Participación de Operarios en Trabajo Extraordinario</h2>
         <canvas id="extraChart"></canvas>
     </div>
 
     <div class="chart-box">
-        <h2>Evolución Semanal</h2>
+        <h2>Dotación Operativa y Operarios con Horas Extra</h2>
         <canvas id="weeklyChart"></canvas>
     </div>
 
@@ -292,7 +324,7 @@ new Chart(document.getElementById('weeklyChart'), {
             tension:.3
         },
         {
-            label:'Horas Extra',
+            label:'Operarios que realizaron Horas Extra',
             data:[
                 45,40.2,37.2,47,
                 53,49.8,34.4,47
